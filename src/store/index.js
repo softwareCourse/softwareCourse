@@ -5,7 +5,12 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state: {
-        name: 'helloVueX'
+        roadData: null
+    },
+    mutations: {
+        changeRoadData(state, data) {
+            state.roadData = data
+        }
     }
 })
 

@@ -62,7 +62,7 @@ export default {
         TableGroup
     },
     mounted(){
-        
+        window.console.log(this.$store.state.roadData)
     },
     methods: {
         selectMenu(index){
