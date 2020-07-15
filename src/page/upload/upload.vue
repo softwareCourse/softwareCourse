@@ -337,6 +337,9 @@ export default {
                     window.console.log(this.uploadData)
                     this.runningFlag = false
                     this.finishFlag = true
+                    for(let point of this.uploadData){
+                        point['lngLat'] = [point['lngLat']['lng'],point['lngLat']['lat']]
+                    }
                     this.$store.commit("changeRoadData",this.uploadData)
                 }).catch(err =>{
                     window.console.log(err)
